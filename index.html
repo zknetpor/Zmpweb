@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal Berita Kampus Terkini">
+  <title>KampusNews</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     TICKER / RUNNING TEXT
+════════════════════════════════════════════ -->
+<div id="ticker-bar">
+  <div class="ticker-label">🔴 LIVE</div>
+  <div class="ticker-scroll">
+    <div id="ticker-content"><!-- populated by JS --></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION (public)
+════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-logo" onclick="navigate('home')">
+    <div class="nav-logo-icon" id="logo-text">KN</div>
+    <span class="nav-logo-name" id="site-name">KampusNews</span>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" onclick="navigate('home')">🏠 Beranda</button>
+    <button class="nav-btn-admin" onclick="navigate('admin')">⚙️ Admin</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     MAIN APP (public views)
+════════════════════════════════════════════ -->
+<div id="app"><!-- rendered by JS --></div>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER (public)
+════════════════════════════════════════════ -->
+<footer id="main-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-logo-icon" id="footer-logo-icon">KN</div>
+      <div>
+        <div class="footer-name" id="footer-site-name">KampusNews</div>
+        <div class="footer-info" id="footer-text">Portal berita kampus terkini</div>
+      </div>
+    </div>
+    <div class="footer-info">
+      Kontak: <strong id="footer-contact"></strong>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     ADMIN PANEL (full-screen)
+════════════════════════════════════════════ -->
+<div id="admin-panel" style="display:none">
+  <!-- rendered by JS -->
+</div>
+
+<!-- ═══════════════════════════════════════════
+     TOAST NOTIFICATION
+════════════════════════════════════════════ -->
+<div id="toast"></div>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════ -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
